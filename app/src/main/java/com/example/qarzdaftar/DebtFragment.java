@@ -56,6 +56,13 @@ public class DebtFragment extends Fragment {
         userArrayList.add(new User("Og'abek Xusinov", "100000", "10.04.2024"));
         userArrayList.add(new User("Ziyodulla Abdukarimov", "150000", "14.04.2024"));
         userArrayList.add(new User("Elomon Jumanazarov", "10000000", "03.04.2024"));
+        userArrayList.add(new User("Elomon Jumanazarov", "10000000", "03.04.2024"));
+        userArrayList.add(new User("Elomon Jumanazarov", "10000000", "03.04.2024"));
+        userArrayList.add(new User("Elomon Jumanazarov", "10000000", "03.04.2024"));
+        userArrayList.add(new User("Elomon Jumanazarov", "10000000", "03.04.2024"));
+        userArrayList.add(new User("Elomon Jumanazarov", "10000000", "03.04.2024"));
+        userArrayList.add(new User("Elomon Jumanazarov", "10000000", "03.04.2024"));
+        userArrayList.add(new User("Elomon Jumanazarov", "10000000", "03.04.2024"));
 
         // Initialize listAdapter and set it to the ListView
         listAdapter = new ListAdapter(getActivity(), userArrayList);

@@ -32,7 +32,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/personName"
+                    android:id="@+id/clientName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Xusinov Og'abek"
@@ -41,19 +41,11 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/personDebt"
+                    android:id="@+id/clientPhone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="120,000.00"
-                    android:textColor="@color/sub_text" />
-
-                <TextView
-                    android:id="@+id/personDebtDate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="8:35 pm"
+                    android:text="+998999999999"
                     android:textColor="@color/sub_text" />
 
 
@@ -62,13 +54,22 @@
         </LinearLayout>
 
         <ImageButton
-            android:id="@+id/user_image"
+            android:id="@+id/delete_image"
             android:layout_width="149dp"
             android:layout_height="96dp"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="-26dp"
+            android:layout_marginRight="-37dp"
             android:background="@android:color/transparent"
-            android:src="@drawable/message_324__3_" />
+            android:src="@drawable/baseline_delete_24" />
+
+        <ImageButton
+            android:id="@+id/edit_image"
+            android:layout_width="149dp"
+            android:layout_height="96dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="4dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/baseline_edit_24" />
 
 
     </RelativeLayout>

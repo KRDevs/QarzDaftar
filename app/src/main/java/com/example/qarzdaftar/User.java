@@ -1,7 +1,7 @@
 package com.example.qarzdaftar;
 
 public class User {
-    String name, debt, date, phoneNumber;
+    String name, debt, date;
 
     public User(String name, String debt, String date) {
         this.name = name;

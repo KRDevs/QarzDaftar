@@ -2,11 +2,16 @@ package com.example.qarzdaftar;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +28,9 @@ public class ClientFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private ListView listView;
+    private ClientListAdapter clientListAdapter;
+    private ArrayList<Clients> clientsArrayList;
 
     public ClientFragment() {
         // Required empty public constructor
@@ -55,10 +63,30 @@ public class ClientFragment extends Fragment {
         }
     }
 
+    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_client, container, false);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_client, container, false);
+        listView = view.findViewById(R.id.client_list);
+
+        // Initialize userArrayList with your data
+        clientsArrayList = new ArrayList<>();
+        clientsArrayList.add(new Clients("Komron Raximov", "12000"));
+        clientsArrayList.add(new Clients("Komron Raximov", "12000"));
+        clientsArrayList.add(new Clients("Komron Raximov", "12000"));
+        clientsArrayList.add(new Clients("Komron Raximov", "12000"));
+        clientsArrayList.add(new Clients("Komron Raximov", "12000"));
+        clientsArrayList.add(new Clients("Komron Raximov", "12000"));
+        clientsArrayList.add(new Clients("Komron Raximov", "12000"));
+        clientsArrayList.add(new Clients("Komron Raximov", "12000"));
+        clientsArrayList.add(new Clients("Komron Raximov", "12000"));
+        clientsArrayList.add(new Clients("Komron Raximov", "12000"));
+
+
+        // Initialize listAdapter and set it to the ListView
+        clientListAdapter = new ClientListAdapter(getActivity(), clientsArrayList);
+        listView.setAdapter(clientListAdapter);
+
+        return view;
     }
 }
