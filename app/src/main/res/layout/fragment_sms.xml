@@ -5,11 +5,292 @@
     android:layout_height="match_parent"
     tools:context=".SmsFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Hello world"
-        android:textSize="26dp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/debtList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/check_symbol_4794__2_" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Yuborilgan sms soni"
+                        android:textColor="@color/main_text"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/smsCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="sans-serif"
+                        android:text="653"
+                        android:textColor="@color/main_text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/money_dollar_6369" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Jami sarflangan summa"
+                        android:textColor="@color/main_text"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/totalSum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="sans-serif"
+                        android:text="32650 UZS"
+                        android:textColor="@color/main_text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/money_rain_6370" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="Qoldiq"
+                        android:textColor="@color/main_text"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/balans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="sans-serif"
+                        android:text="1000 SMS"
+                        android:textColor="@color/main_text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/money_dollar_6365" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="1 ta sms narxi"
+                        android:textColor="@color/main_text"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/oneSms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="sans-serif"
+                        android:text="60 UZS"
+                        android:textColor="@color/main_text"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif"
+                android:text="Sozlamalar"
+                android:textColor="@color/main_text"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif"
+                android:text="Sms matni"
+                android:textColor="@color/main_text"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/notificationSms"
+                android:layout_width="380dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/search_background"
+                android:fontFamily="sans-serif"
+                android:paddingLeft="15dp"
+                android:text="Ogohlantiruvchi sms matni. Masalan: Qarz belgilangan vaqtdan o’tib ketdi. To’lashni unutmang !"
+                android:textColor="@color/sub_text"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <Switch
+                    android:id="@+id/simpleSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:checked="false"
+                    android:gravity="left|center_vertical"
+                    android:textColor="@color/main_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Sms xabarnoma orqali ogohlantirish" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif"
+                android:text="Takror yuborish vaqti (kunda)"
+                android:textColor="@color/main_text"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/notificationDay"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="left"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/search_background"
+                android:fontFamily="sans-serif"
+                android:paddingLeft="15dp"
+                android:text="3"
+                android:textColor="@color/sub_text"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="horizontal"
+                >
+
+                <Button
+                    android:id="@+id/notSaveBtn"
+                    android:layout_width="150dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="40dp"
+                    android:text="Saqlash"
+                    android:background="@drawable/btn_background"/>
+
+                <Button
+                    android:id="@+id/notCancelBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:text="Bekor qilish"
+                    android:background="@drawable/btn_background"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
