@@ -6,9 +6,4 @@
     <color name="sub_text">#A5A3AE</color>
     <color name="save_btn">#7367F0</color>
     <color name="cancel_btn">#A8AAAE</color>
-    <resources>
-        <color name="default_button_color">#3F51B5</color>
-        <color name="pressed_button_color">#7986CB</color>
-    </resources>
-
 </resources>
