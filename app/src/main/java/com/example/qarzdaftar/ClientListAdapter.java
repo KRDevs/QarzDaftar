@@ -36,3 +36,4 @@ public class ClientListAdapter extends ArrayAdapter<Clients> {
         return convertView;
     }
 }
+

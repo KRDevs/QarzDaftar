@@ -1,26 +1,22 @@
 package com.example.qarzdaftar;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link ProfileFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+import androidx.fragment.app.Fragment;
+
+import com.example.qarzdaftar.R;
+
 public class ProfileFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -28,15 +24,6 @@ public class ProfileFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ProfileFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static ProfileFragment newInstance(String param1, String param2) {
         ProfileFragment fragment = new ProfileFragment();
         Bundle args = new Bundle();
@@ -59,6 +46,41 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        View view = inflater.inflate(R.layout.fragment_profile, container, false);
+
+        // Access the TableLayout
+        TableLayout tableLayout = view.findViewById(R.id.tableLayout);
+
+        // Create and add headers row
+        TableRow headersRow = new TableRow(getActivity());
+        String[] headers = {"Column 1", "Column 2", "Column 3", "Column 4"};
+        for (String header : headers) {
+            TextView textView = new TextView(getActivity());
+            textView.setText(header);
+            textView.setPadding(10, 0, 10, 0);
+            headersRow.addView(textView);
+        }
+        tableLayout.addView(headersRow);
+
+        // Example data rows
+        String[][] data = {
+                {"Data 1", "Data 2", "Data 3", "Data 4"},
+                {"Data 5", "Data 6", "Data 7", "Data 8"},
+                // Add more data as needed
+        };
+
+        // Add data rows dynamically
+        for (String[] rowData : data) {
+            TableRow dataRow = new TableRow(getActivity());
+            for (String datum : rowData) {
+                TextView textView = new TextView(getActivity());
+                textView.setText(datum);
+                textView.setPadding(10, 0, 10, 0);
+                dataRow.addView(textView);
+            }
+            tableLayout.addView(dataRow);
+        }
+
+        return view;
     }
 }

@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    tools:context=".client_profile">
 
+    <!-- TODO: Update blank fragment layout -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,7 +44,7 @@
                 android:paddingTop="8dp"
                 android:paddingEnd="10dp"
                 android:paddingBottom="8dp"
-                android:text="Admin"
+                android:text="Client"
                 android:textColor="@color/sub_text"
                 android:textSize="15dp" />
 
@@ -81,7 +82,7 @@
                 android:layout_gravity="left"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
-                android:text="Username: xus1novv"
+                android:text="F.I.SH: Elomon Jumanazarov"
                 android:textColor="@color/main_text"
                 android:textSize="18dp" />
 
@@ -91,10 +92,33 @@
                 android:layout_gravity="left"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="40dp"
-                android:text="Do'kon: Xazorasp Bozor"
+                android:layout_marginBottom="20dp"
+                android:text="Umumiy qarzdorligi: 1,200,000.00"
                 android:textColor="@color/main_text"
                 android:textSize="18dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="20dp"
+                android:text="To'langan miqdor: 1,200,000.00"
+                android:textColor="@color/main_text"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/edit_profile_Button"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/btn_style"
+                android:fontFamily="sans-serif-medium"
+                android:text="Tahrirlash"
+                android:textSize="18dp" />
+
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -102,13 +126,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ProfileFragment">
+        tools:context=".ProfileFragment"/>
 
-        <TableLayout
-            android:id="@+id/tableLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="520dp"
-            android:padding="16dp" />
-    </RelativeLayout>
 </FrameLayout>
