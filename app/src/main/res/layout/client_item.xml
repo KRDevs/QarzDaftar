@@ -37,7 +37,7 @@
                     android:layout_height="wrap_content"
                     android:text="Xusinov Og'abek"
                     android:textColor="@color/main_text"
-                    android:textSize="26sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView

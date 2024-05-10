@@ -48,39 +48,6 @@ public class ProfileFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        // Access the TableLayout
-        TableLayout tableLayout = view.findViewById(R.id.tableLayout);
-
-        // Create and add headers row
-        TableRow headersRow = new TableRow(getActivity());
-        String[] headers = {"Column 1", "Column 2", "Column 3", "Column 4"};
-        for (String header : headers) {
-            TextView textView = new TextView(getActivity());
-            textView.setText(header);
-            textView.setPadding(10, 0, 10, 0);
-            headersRow.addView(textView);
-        }
-        tableLayout.addView(headersRow);
-
-        // Example data rows
-        String[][] data = {
-                {"Data 1", "Data 2", "Data 3", "Data 4"},
-                {"Data 5", "Data 6", "Data 7", "Data 8"},
-                // Add more data as needed
-        };
-
-        // Add data rows dynamically
-        for (String[] rowData : data) {
-            TableRow dataRow = new TableRow(getActivity());
-            for (String datum : rowData) {
-                TextView textView = new TextView(getActivity());
-                textView.setText(datum);
-                textView.setPadding(10, 0, 10, 0);
-                dataRow.addView(textView);
-            }
-            tableLayout.addView(dataRow);
-        }
-
         return view;
     }
 }
